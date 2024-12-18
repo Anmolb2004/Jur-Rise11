@@ -1,0 +1,131 @@
+/* General container */
+.upload-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Section */
+  .upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+  }
+  
+  .section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .section-header h3 {
+    margin-left: 8px;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  .react-icon {
+    font-size: 20px;
+    color: #007bff;
+  }
+  
+  /* Upload box */
+  .upload-box1 {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #e0e0e0;
+    min-width: 280px;
+    min-height: 150px;
+    position: relative;
+  }
+
+  .upload-box2{
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #e0e0e0;
+    min-width: 100px;
+    min-height: 150px;
+    position: relative;
+  }
+  
+  .gray-box {
+    background-color: #f2f4f7;
+  }
+  
+  .dotted-box {
+    border: 2px dashed #007bff;
+  }
+  
+  .upload-icon {
+    font-size: 30px;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .text-line,
+  .or-text,
+  p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 14px;
+  }
+  
+  .small-text {
+    font-size: 12px;
+    color: #888;
+  }
+  
+  .or-text {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  /* Grid Layout */
+  .upload-grid {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Plus Button */
+  .plus-button {
+    /* border: 2px dashed #007bff; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    min-width: 150px;
+    min-height: 150px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .plus-icon {
+    font-size: 30px;
+    color: #007bff;
+  }
+  
+  .plus-button:hover {
+    background-color: #f0f8ff;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+
+  
+  
