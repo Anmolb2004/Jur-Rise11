@@ -1,1 +1,1 @@
-JUR
+JUR Project
