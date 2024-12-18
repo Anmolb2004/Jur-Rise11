@@ -1,8 +1,8 @@
 import React from "react";
 import Sidebar from "./components/Sidebar/Sidebar";
-import Header from "./components/Header";
-import ClaimForm from "./components/ClaimForm";
-import UploadSection from "./components/UploadSection";
+import Header from "./components/Header/Header";
+import ClaimForm from "./components/ClaimForm/ClaimForm";
+import UploadSection from "./components/UploadSection/UploadSection";
 import "./App.css";
 
 function App() {
