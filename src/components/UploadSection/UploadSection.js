@@ -5,10 +5,10 @@ import { FaCloudUploadAlt, FaFileAlt} from "react-icons/fa";
 function UploadSection() {
   const [files, setFiles] = useState([]);
   const [errors, setErrors] = useState("");
-  const fileInputRef = useRef(null); // Ref for the hidden file input
-  const plusFileInputRef = useRef(null); // Ref for the file input triggered by the plus button
+  const fileInputRef = useRef(null); 
+  const plusFileInputRef = useRef(null); 
 
-  // Handle file selection from input
+
   const handleFileUpload = (e) => {
     const uploadedFile = e.target.files[0];
     if (uploadedFile) {
@@ -16,28 +16,28 @@ function UploadSection() {
     }
   };
 
-  // Trigger file input on click
+
   const triggerFileInput = () => {
     fileInputRef.current.click();
   };
 
-  // Trigger file input on clicking the plus button
+
   const triggerPlusFileInput = () => {
     plusFileInputRef.current.click();
   };
 
-  // Handle drag over event
+
   const handleDragOver = (e) => {
-    e.preventDefault(); // Prevent default to allow dropping
+    e.preventDefault(); 
     e.stopPropagation();
-    e.target.classList.add("drag-over"); // Add class for visual feedback
+    e.target.classList.add("drag-over"); 
   };
 
-  // Handle file drop event
+ 
   const handleDrop = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    e.target.classList.remove("drag-over"); // Remove drag-over class after drop
+    e.target.classList.remove("drag-over"); 
     const uploadedFile = e.dataTransfer.files[0];
     if (uploadedFile) {
       validateFile(uploadedFile);
@@ -67,7 +67,7 @@ function UploadSection() {
 
   return (
     <div className="upload-container">
-      {/* Statement Section */}
+  
       <div className="upload-section">
         <div className="section-header">
           <FaFileAlt className="react-icon" />
@@ -100,11 +100,11 @@ function UploadSection() {
           accept="application/pdf"
           onChange={handleFileUpload}
           ref={fileInputRef}
-          style={{ display: "none" }} // Hidden file input
+          style={{ display: "none" }} 
         />
       </div>
 
-      {/* Agreement under Disputes */}
+
       <div className="upload-section">
         <div className="section-header">
           <FaFileAlt className="react-icon" />
@@ -138,11 +138,11 @@ function UploadSection() {
           accept="application/pdf"
           onChange={handleFileUpload}
           ref={fileInputRef}
-          style={{ display: "none" }} // Hidden file input
+          style={{ display: "none" }} 
         />
       </div>
 
-      {/* Additional Documentation */}
+      
       <div className="upload-section">
         <div className="section-header">
           <FaFileAlt className="react-icon" />
@@ -169,7 +169,7 @@ function UploadSection() {
           accept="application/pdf"
           onChange={handleFileUpload}
           ref={plusFileInputRef}
-          style={{ display: "none" }} // Hidden file input for plus button
+          style={{ display: "none" }} 
         />
       </div>
     </div>

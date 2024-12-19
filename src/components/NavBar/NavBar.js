@@ -17,7 +17,7 @@ const NavBar = ({ toggleSidebar }) => {
   }, []);
 
   return (
-    <div className="header" >
+    <div className="header">
       {isMobile && (
         <button className="hamburger-menu" onClick={toggleSidebar}>
           ☰

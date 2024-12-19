@@ -13,21 +13,21 @@ function ProgressBar() {
     { label: "Payment", time: "(Approx 5 Min)" },
   ];
 
-  const completedSteps = 3; // Change this to control progress.
+  const completedSteps = 3; 
 
   return (
     <div className="header1">
       <div className="stepper-container">
         {steps.map((step, index) => (
           <div className="stepper-item" key={index}>
-            {/* Step Label */}
+
             <div className="step-label">
               <p>
                 <strong>{`0${index + 1}`}</strong> {step.label}
               </p>
             </div>
 
-            {/* Circle */}
+  
             <div
               className={`circle ${
                 index < completedSteps
@@ -40,10 +40,10 @@ function ProgressBar() {
               {index < completedSteps ? <FiCheck /> : <span>{index + 1}</span>}
             </div>
 
-                {/* Time */}
+      
             <div className="step-time">{step.time}</div>
 
-            {/* Connecting Lines */}
+         
             {index !== steps.length - 1 && (
               <div
                 className={`line ${

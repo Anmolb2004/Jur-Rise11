@@ -11,7 +11,7 @@ import {
   FiMessageCircle,
 } from "react-icons/fi";
 
-// Wrap Sidebar with forwardRef
+
 const Sidebar = React.forwardRef(({ isOpen }, ref) => {
   return (
     <div ref={ref} className={`sidebar ${isOpen ? "open" : ""}`}>

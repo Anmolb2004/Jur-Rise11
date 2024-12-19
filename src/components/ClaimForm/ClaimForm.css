@@ -67,31 +67,31 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 14px;
-  width: 100%; /* Ensure the dropdown takes full width */
+  width: 100%; 
   max-width: 400px; 
   background-color:  #f0f4f7;
 }
 
 .input-with-currency select {
-  padding: 10px; /* Increase padding for larger size */
-  border: none; /* Remove border */
-  border-radius: 0; /* Ensure no border radius */
-  font-size: 16px; /* Increase font size */
-  background-color: #f9f9f9; /* Keep the background subtle */
+  padding: 10px; 
+  border: none; 
+  border-radius: 0; 
+  font-size: 16px; 
+  background-color: #f9f9f9; 
   cursor: pointer;
-  outline: none; /* Remove focus outline */
-  width: auto; /* Adjust width to fit content */
+  outline: none; 
+  width: auto; 
 }
 
 
 .styled-select {
   flex: 1;
-  padding: 12px; /* Increase padding for a larger height */
+  padding: 12px; 
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 16px; /* Increase font size for better readability */
-  width: 100%; /* Ensure the dropdown takes full width */
-  max-width: 400px; /* Set a maximum width if needed */
+  font-size: 16px; 
+  width: 100%; 
+  max-width: 400px; 
   appearance: none;
   background-color: #fff;
   background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3E%3Cpath fill='gray' d='M0 0l5 5 5-5H0z'/%3E%3C/svg%3E");

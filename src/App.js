@@ -8,13 +8,13 @@ import "./App.css";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const sidebarRef = useRef(null); // Reference to the sidebar
+  const sidebarRef = useRef(null); 
 
   const toggleSidebar = () => {
     setIsSidebarOpen((prev) => !prev);
   };
 
-  // Close sidebar when clicked outside
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
@@ -35,7 +35,6 @@ function App() {
 
   return (
     <div className="app">
-      {/* Pass isSidebarOpen and toggleSidebar to Sidebar and NavBar */}
       <Sidebar ref={sidebarRef} isOpen={isSidebarOpen} />
       <div className={`main-content ${isSidebarOpen ? "blur" : ""}`}>
         <NavBar toggleSidebar={toggleSidebar} />

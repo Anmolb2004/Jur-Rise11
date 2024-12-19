@@ -1,4 +1,4 @@
-/* General container */
+
 .upload-container {
   background-color: white;
   display: flex;
@@ -10,7 +10,7 @@
   font-family: Arial, sans-serif;
 }
 
-/* Section */
+
 .upload-section {
   display: flex;
   flex-direction: column;
@@ -18,7 +18,7 @@
   flex: 1;
 }
 
-/* Section Header */
+
 .section-header {
   display: flex;
   align-items: center;
@@ -62,14 +62,14 @@
   border: 2px dashed #007bff;
 }
 
-/* Upload Icon */
+
 .upload-icon {
   font-size: 30px;
   color: #007bff;
   margin-bottom: 10px;
 }
 
-/* Text Elements */
+
 .text-line, .or-text, p {
   margin: 5px 0;
   color: #555;
@@ -86,13 +86,13 @@
   color: #666;
 }
 
-/* Grid Layout */
+
 .upload-grid {
   display: flex;
   gap: 10px;
 }
 
-/* Plus Button */
+
 .plus-button {
   display: flex;
   align-items: center;
@@ -102,7 +102,7 @@
   min-height: 50px;
   cursor: pointer;
   transition: background-color 0.2s;
-  /* border: 2px dashed #007bff; */
+
 }
 
 .plus-icon {
@@ -114,14 +114,14 @@
   background-color: #f0f8ff;
 }
 
-/* Error Message */
+
 .error-text {
   color: #ff4d4d;
   font-size: 12px;
   margin-top: 10px;
 }
 
-/* Uploaded Files List */
+
 .uploaded-files {
   margin-top: 10px;
   color: #555;
@@ -164,46 +164,44 @@
   color: #0056b3;
 }
 
-/* File Input */
+
 input[type="file"] {
   display: none;
 }
 
-/* Plus Button */
+
 .plus-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%; /* Ensures a circular shape */
-  width: 50px; /* Smaller width */
-  height: 0px; /* Smaller height */
+  border-radius: 50%; 
+  width: 50px; 
+  height: 0px; 
   cursor: pointer;
   transition: background-color 0.2s, border-color 0.2s;
-  border: 2px solid #007bff; /* Solid blue border */
-  box-sizing: border-box; /* Ensures borders are included in width/height */
-  padding: 0; /* Prevents padding from affecting size */
-  margin: 30px; /* Prevents margin from affecting size */
+  border: 2px solid #007bff; 
+  box-sizing: border-box; 
+  padding: 0; 
+  margin: 30px; 
 }
 
 .plus-icon {
-  font-size: 16px; /* Adjust font size for smaller circle */
-  color: #007bff; /* Blue color */
+  font-size: 16px; 
+  color: #007bff; 
   font-weight: bold;
 }
 
 .plus-button:hover {
-  background-color: #f0f8ff; /* Light blue hover effect */
-  border-color: #0056b3; /* Darker blue on hover */
+  background-color: #f0f8ff; 
+  border-color: #0056b3; 
 }
 
-
-/* Parent container of the plus button */
 .upload-grid {
   display: flex;
-  justify-content: space-between; /* Horizontally centers the items */
-  align-items: center; /* Vertically centers the items */
-  height: 100%; /* Ensures the parent container has enough height for centering */
-   /* Space between other items in the grid */
+  justify-content: space-between; 
+  align-items: center; 
+  height: 100%; 
+  
 }
 
   

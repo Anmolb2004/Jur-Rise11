@@ -84,7 +84,6 @@ function ClaimForm() {
             <FaMapMarkerAlt className="icon" />
             <h4>Place</h4>
           </div>
-          {/* <label>Select Place for Proceedings</label> */}
           <select
             className="styled-select"
             value={place}
@@ -113,7 +112,6 @@ function ClaimForm() {
             <FaLanguage className="icon" />
             <h4>Language</h4>
           </div>
-          {/* <label>Select Language for Proceedings</label> */}
           <select
             className="styled-select"
             value={language}

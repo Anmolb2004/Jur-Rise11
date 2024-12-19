@@ -1,4 +1,4 @@
-/* Header container styling */
+
 .header {
     display: flex;
     justify-content: flex-end;
@@ -9,14 +9,14 @@
     border-radius: 10px;
   }
   
-  /* Right section styling */
+
   .right-section {
     display: flex;
     align-items: center;
     gap: 20px;
   }
   
-  /* Icon wrapper */
+
   .icon-wrapper {
     display: flex;
     justify-content: center;
@@ -27,14 +27,14 @@
     cursor: pointer;
   }
   
-  /* Icon styles */
+
   .icon {
     width: 24px;
     height: 24px;
-    color: #007bff; /* Blue color for icons */
+    color: #007bff; 
   }
   
-  /* Notification dot */
+ 
   .notification-dot {
     position: absolute;
     top: 5px;

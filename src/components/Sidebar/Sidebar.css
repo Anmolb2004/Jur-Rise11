@@ -1,4 +1,4 @@
-/* Sidebar Styles */
+
 .sidebar {
   width: 250px;
   position: fixed;
@@ -17,29 +17,29 @@
   transform: translateX(0);
 }
 
-/* Main Content Styles */
+
 .main-content {
   margin-left: 0;
   transition: filter 0.3s ease-in-out;
 }
 
 .main-content.blur {
-  filter: blur(5px); /* Adjust blur level as needed */
+  filter: blur(5px); 
 }
 
-/* Ensure sidebar is always visible on desktop */
+
 @media (min-width: 768px) {
   .sidebar {
     transform: translateX(0);
   }
   .main-content {
     margin-left: 250px;
-    filter: none; /* Disable blur effect on desktop */
+    filter: none; 
   }
 }
 
 
-/* Logo Section */
+
 .logo-section {
   display: flex;
   align-items: center;
@@ -57,10 +57,10 @@
 .logo-text {
   font-size: 24px;
   font-weight: 700;
-  color: #1a3e72; /* Darker blue for brand emphasis */
+  color: #1a3e72; 
 }
 
-/* Menu List */
+
 .menu {
   list-style: none;
   margin: 0;
@@ -82,28 +82,27 @@
 
 .menu-item:hover,
 .menu-item.active {
-  background-color: #eaf3ff; /* Light blue hover */
+  background-color: #eaf3ff; 
   color: #007bff;
   font-weight: 600;
 }
 
 .menu-icon {
   font-size: 20px;
-  color: inherit; /* Icon takes text color */
+  color: inherit; 
 }
 
-/* Justice Banner */
+
 .justice-banner {
   text-align: center;
   margin: 30px auto;
   padding: 15px;
-  /* background-color: #eaf3ff; */
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 .banner-image {
-  width: 100%; /* Responsive banner image */
+  width: 100%; 
   height: auto;
   margin-bottom: 60px;
 }
@@ -118,14 +117,14 @@
   transform: translateX(0);
 }
 
-/* Hide sidebar on mobile by default */
+
 @media (max-width: 768px) {
   .sidebar {
     transform: translateX(-100%);
   }
 }
 
-/* Mobile hamburger button */
+
 .hamburger-menu {
   background: none;
   border: none;
