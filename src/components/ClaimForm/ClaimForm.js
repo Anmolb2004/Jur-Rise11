@@ -85,19 +85,24 @@ function ClaimForm() {
             <h4>Place</h4>
           </div>
           {/* <label>Select Place for Proceedings</label> */}
-          <input
-            type="text"
-            placeholder="Select the place for proceedings"
+          <select
+            className="styled-select"
             value={place}
             onChange={(e) => setPlace(e.target.value)}
-          />
+          >
+            <option value="" disabled>Select the place for proceedings</option>
+            <option value="New York">New York</option>
+            <option value="London">London</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Paris">Paris</option>
+          </select>
           <p>Is the place for proceedings the one mentioned in the agreement?</p>
           <div className="radio-group">
             <label>
-              <input type="radio" name="place" /> Yes
+              <input type="radio" name="placeAgreement" /> Yes
             </label>
             <label>
-              <input type="radio" name="place" /> No
+              <input type="radio" name="placeAgreement" /> No
             </label>
           </div>
         </div>
@@ -109,19 +114,24 @@ function ClaimForm() {
             <h4>Language</h4>
           </div>
           {/* <label>Select Language for Proceedings</label> */}
-          <input
-            type="text"
-            placeholder="Select the language for proceedings"
+          <select
+            className="styled-select"
             value={language}
             onChange={(e) => setLanguage(e.target.value)}
-          />
+          >
+            <option value="" disabled>Select the language for proceedings</option>
+            <option value="English">English</option>
+            <option value="Spanish">Spanish</option>
+            <option value="Hindi">Hindi</option>
+            <option value="French">French</option>
+          </select>
           <p>Is the language for the proceedings the one mentioned in the agreement?</p>
           <div className="radio-group">
             <label>
-              <input type="radio" name="language" /> Yes
+              <input type="radio" name="languageAgreement" /> Yes
             </label>
             <label>
-              <input type="radio" name="language" /> No
+              <input type="radio" name="languageAgreement" /> No
             </label>
           </div>
         </div>
@@ -136,6 +146,7 @@ function ClaimForm() {
 }
 
 export default ClaimForm;
+
 
 
 

@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import "./UploadSection.css";
-import { FaCloudUploadAlt, FaFileAlt, FaPlusCircle } from "react-icons/fa";
+import { FaCloudUploadAlt, FaFileAlt} from "react-icons/fa";
 
 function UploadSection() {
   const [files, setFiles] = useState([]);
@@ -160,7 +160,7 @@ function UploadSection() {
             <p className="small-text">Max 2MB, PDF</p>
           </div>
           <div className="plus-button" onClick={triggerPlusFileInput}>
-            <FaPlusCircle className="plus-icon" />
+          <span className="plus-icon">+</span>
           </div>
         </div>
         {errors && <p className="error-text">{errors}</p>}

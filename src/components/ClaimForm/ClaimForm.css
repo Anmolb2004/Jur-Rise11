@@ -1,197 +1,137 @@
 .claim-form {
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-    font-family: "Arial", sans-serif;
-  }
-  
-  .file-claim-title {
-    font-size: 22px;
-    color: #333;
-    margin-bottom: 25px;
-    position: relative;
-    display: inline-block;
-  }
-  
-  .file-claim-title::after {
-    content: "";
-    position: absolute;
-    bottom: -4px; /* Creates a line below */
-    left: 0;
-    width: 60%; /* Line is partially blue */
-    height: 2px;
-    background: #007bff;
-  }
-  
-  .file-claim-title span {
-    color: #007bff;
-    font-size: 14px;
-    margin-left: 10px;
-  }
-  
-  .form-section {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: nowrap;
-  }
-  
-  .form-card {
-    flex: 1;
-    background: none; /* Remove background color */
-    padding: 15px;
-    border: none; /* No borders */
-    box-shadow: none; /* Remove shadow */
-  }
-  
-  .form-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .form-header .icon {
-    color: #007bff;
-    margin-right: 10px;
-    font-size: 20px;
-  }
-  /* Blue Line Below Header */
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  font-family: "Arial", sans-serif;
+}
+
+.file-claim-title {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+}
+
+.file-claim-title::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 60%;
+  height: 2px;
+  background: #007bff;
+}
+
+.form-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+.form-card {
+  flex: 1;
+  padding: 15px;
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-header .icon {
+  color: #007bff;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
 .blue-line {
-    width: 300px;
-    height: 3px;
-    background-color: #007bff;
-    margin: 5px 0 15px;
-  }
-  
-  /* Input with Currency Selector */
-  .input-with-currency {
-    display: flex;
-    align-items: center;
-  }
-  
-  .input-with-currency input {
-    flex: 1;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-right: none;
-    border-radius: 4px 0 0 4px;
-    font-size: 14px;
-  }
-  
-  .input-with-currency select {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-left: none;
-    border-radius: 0 4px 4px 0;
-    font-size: 14px;
-    background-color: #f9f9f9;
-    cursor: pointer;
-  }
-  
-  
-  label {
-    display: block;
-    margin: 10px 0 5px;
-    color: #666;
-    font-size: 14px;
-  }
-  
-  input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-    outline: none;
-  }
-  
-  .input-wrapper {
-    position: relative;
-  }
-  
-  .input-wrapper input {
-    padding-right: 40px; /* Leave space for USD */
-  }
-  
-  .input-currency {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #666;
-    font-size: 14px;
-    pointer-events: none;
-  }
-  .currency-input {
-    display: flex;
-    gap: 5px;
-    align-items: center;
-  }
-  
-  .currency-input select {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-    outline: none;
-    background-color: #fff;
-    cursor: pointer;
-  }
-  
-  .currency-input input {
-    flex: 1;
-  }
-  
-  .warning {
-    color: rgba(212, 112, 31, 0.917);
-    font-size: 12px;
-    margin-top: 5px;
-  }
-  
-  .radio-group {
-    display: flex;
-    gap: 15px;
-    margin-top: 10px;
-  }
-  
-  .radio-group label {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  
-  .submit-btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  .submit-btn:hover {
-    background-color: #0056b3;
-  }
-  
-  @media (max-width: 1024px) {
-    .form-section {
-      flex-wrap: wrap;
-    }
-    .form-card {
-      flex: 0 0 calc(50% - 20px);
-      min-width: 300px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .form-card {
-      flex: 0 0 100%;
-    }
-  }
+  width: 300px;
+  height: 3px;
+  background-color: #007bff;
+  margin: 5px 0 15px;
+}
+
+.input-with-currency {
+  display: flex;
+  align-items: center;
+}
+
+.input-with-currency input,
+.styled-select {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%; /* Ensure the dropdown takes full width */
+  max-width: 400px; 
+  background-color:  #f0f4f7;
+}
+
+.input-with-currency select {
+  padding: 10px; /* Increase padding for larger size */
+  border: none; /* Remove border */
+  border-radius: 0; /* Ensure no border radius */
+  font-size: 16px; /* Increase font size */
+  background-color: #f9f9f9; /* Keep the background subtle */
+  cursor: pointer;
+  outline: none; /* Remove focus outline */
+  width: auto; /* Adjust width to fit content */
+}
+
+
+.styled-select {
+  flex: 1;
+  padding: 12px; /* Increase padding for a larger height */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px; /* Increase font size for better readability */
+  width: 100%; /* Ensure the dropdown takes full width */
+  max-width: 400px; /* Set a maximum width if needed */
+  appearance: none;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3E%3Cpath fill='gray' d='M0 0l5 5 5-5H0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px;
+  cursor: pointer;
+  background-color:  #f0f4f7;
+}
+
+label {
+  margin: 10px 0 5px;
+  color: #666;
+  font-size: 14px;
+}
+
+.warning {
+  color: rgba(212, 112, 31, 0.917);
+  font-size: 12px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 15px;
+}
+
+.submit-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
   
   
   

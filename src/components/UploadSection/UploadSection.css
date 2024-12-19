@@ -3,10 +3,10 @@
   background-color: white;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center; 
   border-radius: 10px;
   gap: 20px;
-  padding: 20px;
+  padding: 30px;
   font-family: Arial, sans-serif;
 }
 
@@ -97,9 +97,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
-  min-width: 150px;
-  min-height: 150px;
+  border-radius: 50%;
+  min-width: 50px;
+  min-height: 50px;
   cursor: pointer;
   transition: background-color 0.2s;
   /* border: 2px dashed #007bff; */
@@ -169,7 +169,42 @@ input[type="file"] {
   display: none;
 }
 
+/* Plus Button */
+.plus-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Ensures a circular shape */
+  width: 50px; /* Smaller width */
+  height: 0px; /* Smaller height */
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+  border: 2px solid #007bff; /* Solid blue border */
+  box-sizing: border-box; /* Ensures borders are included in width/height */
+  padding: 0; /* Prevents padding from affecting size */
+  margin: 30px; /* Prevents margin from affecting size */
+}
 
+.plus-icon {
+  font-size: 16px; /* Adjust font size for smaller circle */
+  color: #007bff; /* Blue color */
+  font-weight: bold;
+}
+
+.plus-button:hover {
+  background-color: #f0f8ff; /* Light blue hover effect */
+  border-color: #0056b3; /* Darker blue on hover */
+}
+
+
+/* Parent container of the plus button */
+.upload-grid {
+  display: flex;
+  justify-content: space-between; /* Horizontally centers the items */
+  align-items: center; /* Vertically centers the items */
+  height: 100%; /* Ensures the parent container has enough height for centering */
+   /* Space between other items in the grid */
+}
 
   
   
