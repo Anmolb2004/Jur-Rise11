@@ -44,13 +44,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 40px;
+  gap: 5px;
+  margin-bottom: 60px;
 }
 
 .jur-logo {
-  width: 75px;
-  height: 75px;
+  width: 85px;
+  height: 65px;
 }
 
 .logo-text {

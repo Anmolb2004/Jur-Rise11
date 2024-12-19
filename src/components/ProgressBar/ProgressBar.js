@@ -1,8 +1,8 @@
 import React from "react";
-import "./Header.css";
+import "./ProgressBar.css";
 import { FiCheck } from "react-icons/fi";
 
-function Header() {
+function ProgressBar() {
   const steps = [
     { label: "Preliminary" },
     { label: "Your Details" },
@@ -62,7 +62,7 @@ function Header() {
   );
 }
 
-export default Header;
+export default ProgressBar;
 
 
 

@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Sidebar from "./components/Sidebar/Sidebar";
 import NavBar from "./components/NavBar/NavBar";
-import Header from "./components/Header/Header";
+import Header from "./components/ProgressBar/ProgressBar";
 import ClaimForm from "./components/ClaimForm/ClaimForm";
 import UploadSection from "./components/UploadSection/UploadSection";
 import "./App.css";
