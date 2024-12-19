@@ -17,8 +17,8 @@ This project is a replication of the provided dashboard design, built entirely u
 ### **2. Modular Components**
 - Structured the project into reusable and independent components for scalability and ease of maintenance:
   - `Sidebar`: Contains navigation links and icons.
-  - `NavBar`: Includes the header, notification icon, and user profile section.
-  - `Header`: Displays the current dashboard title and breadcrumbs.
+  - `NavBar`: Includes notification icon, and user profile section.
+  - `ProgressBar`: Displays the current dashboard title and breadcrumbs.
   - `ClaimForm`: Includes form fields with input validation.
   - `UploadSection`: Manages file uploads with styling and error handling.
   - `ProgressBar`: Dynamically updates progress based on user actions.
@@ -81,9 +81,9 @@ src/
 │   ├── ClaimForm/
 │   │   ├── ClaimForm.js
 │   │   ├── ClaimForm.css
-│   ├── Header/
-│   │   ├── Header.js
-│   │   ├── Header.css
+│   ├── Progress/
+│   │   ├── ProgressBar.js
+│   │   ├── Progress.css
 │   ├── NavBar/
 │   │   ├── NavBar.js
 │   │   ├── NavBar.css
