@@ -4,51 +4,54 @@ import { FiCheck } from "react-icons/fi";
 
 function Header() {
   const steps = [
-    { label: "Preliminary", time: "Approx 5 min" },
-    { label: "Your Details", time: "Approx 10 min" },
-    { label: "KYC", time: "Approx 8 min" },
-    { label: "Parties", time: "Approx 5 min" },
-    { label: "Claim", time: "Approx 7 min" },
-    { label: "Review", time: "Approx 5 min" },
-    { label: "Payment", time: "Approx 3 min" },
+    { label: "Preliminary" },
+    { label: "Your Details" },
+    { label: "KYC" },
+    { label: "Parties", time: "(Approx 5 Min)" },
+    { label: "Claim", time: "(Approx 5 Min)" },
+    { label: "Review", time: "(Approx 5 Min)" },
+    { label: "Payment", time: "(Approx 5 Min)" },
   ];
 
-  const completedSteps = 3; // Change this to match progress
+  const completedSteps = 3; // Change this to control progress.
 
   return (
-    <div className="header">
+    <div className="header1">
       <div className="stepper-container">
         {steps.map((step, index) => (
-          <div
-            className={`stepper-item ${
-              index < completedSteps
-                ? "completed"
-                : index === completedSteps
-                ? "active"
-                : ""
-            }`}
-            key={index}
-          >
-            {/* Step Circle */}
-            <div className="circle">
-              {index < completedSteps ? (
-                <FiCheck className="check-icon" />
-              ) : (
-                <span>{index + 1}</span>
-              )}
-            </div>
-
+          <div className="stepper-item" key={index}>
             {/* Step Label */}
             <div className="step-label">
-              <p>{step.label}</p>
-              <span className="step-time">{step.time}</span>
+              <p>
+                <strong>{`0${index + 1}`}</strong> {step.label}
+              </p>
             </div>
 
-            {/* Connecting Line */}
+            {/* Circle */}
+            <div
+              className={`circle ${
+                index < completedSteps
+                  ? "completed"
+                  : index === completedSteps
+                  ? "active"
+                  : ""
+              }`}
+            >
+              {index < completedSteps ? <FiCheck /> : <span>{index + 1}</span>}
+            </div>
+
+                {/* Time */}
+            <div className="step-time">{step.time}</div>
+
+            {/* Connecting Lines */}
             {index !== steps.length - 1 && (
               <div
                 className={`line ${
-                  index < completedSteps ? "line-completed" : ""
+                  index === completedSteps - 1
+                    ? "dotted-line"
+                    : index < completedSteps
+                    ? "line-completed"
+                    : "line-pending"
                 }`}
               ></div>
             )}
@@ -60,5 +63,9 @@ function Header() {
 }
 
 export default Header;
+
+
+
+
 
 

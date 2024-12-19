@@ -1,115 +1,102 @@
 /* Header Container */
-.header {
-    background-color: #f8fafc;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
-  }
-  
-  /* Stepper Container */
-  .stepper-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    width: 90%;
-    max-width: 1100px;
-    padding: 10px 0;
-  }
-  
-  /* Individual Step */
-  .stepper-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
-    position: relative;
-    text-align: center;
-    z-index: 1;
-  }
-  
-  /* Step Circle */
-  .circle {
-    width: 50px;
-    height: 50px;
-    border: 3px solid #ccc;
-    border-radius: 50%;
-    background-color: #fff;
-    color: #007bff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 16px;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  /* Completed Circle */
-  .stepper-item.completed .circle {
-    background-color: #007bff;
-    color: #fff;
-    border-color: #007bff;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
-  }
-  
-  /* Active Circle */
-  .stepper-item.active .circle {
-    border-color: #007bff;
-    color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.6);
-  }
-  
-  /* Step Labels */
-  .step-label p {
-    margin: 8px 0 4px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #333;
-  }
-  
-  .step-time {
-    font-size: 12px;
-    color: #888;
-  }
-  
-  /* Check Icon */
-  .check-icon {
-    font-size: 20px;
-  }
-  
-  /* Connecting Lines */
-  .line {
-    position: absolute;
-    top: 25px;
-    left: 50%;
-    width: 100%;
-    height: 2px;
-    background-color: #ccc;
-    z-index: -1;
-  }
-  
-  .line.line-completed {
-    background-color: #007bff;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
-    .circle {
-      width: 40px;
-      height: 40px;
-      font-size: 14px;
-    }
-  
-    .step-label p {
-      font-size: 12px;
-    }
-  
-    .step-time {
-      font-size: 10px;
-    }
-  }
+.header1 {
+ 
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+
+  background-color: #ffffff;
+
+}
+
+/* Stepper Container */
+.stepper-container {
+  display: flex;
+  width: 90%;
+  max-width: 1100px;
+  justify-content: space-between;
+  position: relative;
+  /* background-color: #f9f9f9; */
+}
+
+/* Individual Step */
+.stepper-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  text-align: center;
+}
+
+/* Circle Styles */
+.circle {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: #007bff;
+  position: relative;
+  z-index: 2; /* Circle above lines */
+}
+
+.circle.completed {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.circle.active {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Step Labels */
+.step-label p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.step-time {
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* Lines */
+.line {
+  position: absolute;
+  top: 60%; /* Center line vertically */
+  left: 55%; /* Start line after the circle */
+  height: 2px; /* Line thickness */
+  background-color: #ccc;
+  width: calc(100% - 30px); /* Leave space between circles (adjust 50px as needed) */
+  transform: translateY(-50%); /* Perfect centering */
+  z-index: 1;
+}
+
+.line.line-completed {
+  background-color: #007bff;
+}
+
+.line.dotted-line {
+  border-top: 2px dotted #007bff;
+  background-color: transparent;
+}
+
+.line.line-pending {
+  background-color: #ccc;
+}
+
+
+
+
   
   
 
