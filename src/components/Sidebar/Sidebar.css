@@ -1,15 +1,43 @@
-/* Sidebar Container */
+/* Sidebar Styles */
 .sidebar {
   width: 250px;
-  background-color: white; /* Light background for sidebar */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 110vh;
-  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: white;
   box-shadow: 4px 0 8px rgba(0, 0, 0, 0.05);
-  overflow-y: auto; /* Scrollable sidebar */
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
 }
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+/* Main Content Styles */
+.main-content {
+  margin-left: 0;
+  transition: filter 0.3s ease-in-out;
+}
+
+.main-content.blur {
+  filter: blur(5px); /* Adjust blur level as needed */
+}
+
+/* Ensure sidebar is always visible on desktop */
+@media (min-width: 768px) {
+  .sidebar {
+    transform: translateX(0);
+  }
+  .main-content {
+    margin-left: 250px;
+    filter: none; /* Disable blur effect on desktop */
+  }
+}
+
 
 /* Logo Section */
 .logo-section {

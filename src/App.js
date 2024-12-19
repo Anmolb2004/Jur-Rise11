@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Sidebar from "./components/Sidebar/Sidebar";
+import NavBar from "./components/NavBar/NavBar";
 import Header from "./components/Header/Header";
 import ClaimForm from "./components/ClaimForm/ClaimForm";
-import NavBar from "./components/NavBar/NavBar"
 import UploadSection from "./components/UploadSection/UploadSection";
 import "./App.css";
 
@@ -12,11 +12,13 @@ function App() {
   const toggleSidebar = () => {
     setIsSidebarOpen((prev) => !prev);
   };
+
   return (
     <div className="app">
-          <Sidebar isOpen={isSidebarOpen} />
-      <div className="main-content">
-      <NavBar toggleSidebar={toggleSidebar} />
+      {/* Pass isSidebarOpen and toggleSidebar to Sidebar and NavBar */}
+      <Sidebar isOpen={isSidebarOpen} />
+      <div className={`main-content ${isSidebarOpen ? "blur" : ""}`}>
+        <NavBar toggleSidebar={toggleSidebar} />
         <Header />
         <ClaimForm />
         <br></br>
@@ -27,5 +29,7 @@ function App() {
 }
 
 export default App;
+
+
 
 
