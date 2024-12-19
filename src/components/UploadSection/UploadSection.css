@@ -36,7 +36,7 @@
   color: #007bff;
 }
 
-/* Upload Box */
+
 .upload-box1, .upload-box2 {
   background: #f9f9f9;
   border-radius: 8px;
@@ -47,7 +47,7 @@
   min-height: 150px;
   position: relative;
   transition: background-color 0.3s ease;
-  cursor: pointer; /* Make the upload box clickable */
+  cursor: pointer; 
 }
 
 .upload-box2 {

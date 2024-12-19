@@ -1,9 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Sidebar.css";
 import Jur from "./Jur.png";
 import Justice from "./Justice.png";
-
-// Import React Icons for small logos
 import {
   FiHome,
   FiFolder,
@@ -13,9 +11,9 @@ import {
   FiMessageCircle,
 } from "react-icons/fi";
 
-function Sidebar() {
+function Sidebar({ isOpen }) {
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${isOpen ? "open" : ""}`}>
       {/* Logo Section */}
       <div className="logo-section">
         <img src={Jur} alt="Jur Logo" className="jur-logo" />
@@ -53,12 +51,12 @@ function Sidebar() {
       {/* Justice Banner */}
       <div className="justice-banner">
         <img src={Justice} alt="Justice Illustration" className="banner-image" />
-        {/* <p className="banner-text">Get Justice on Every Claim</p> */}
       </div>
     </div>
   );
 }
 
 export default Sidebar;
+
 
 

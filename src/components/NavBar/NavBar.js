@@ -1,11 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./NavBar.css";
 
-const NavBar = () => {
+const NavBar = ({ toggleSidebar }) => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  // Detect screen size changes
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="header">
+      {isMobile && (
+        <button className="hamburger-menu" onClick={toggleSidebar}>
+          ☰
+        </button>
+      )}
+
       <div className="right-section">
-        {/* Bell icon with notification dot */}
         <div className="bell-icon icon-wrapper">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -23,8 +42,6 @@ const NavBar = () => {
           </svg>
           <span className="notification-dot"></span>
         </div>
-
-        {/* Profile icon */}
         <div className="profile-icon icon-wrapper">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -47,6 +64,7 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
 
 
 

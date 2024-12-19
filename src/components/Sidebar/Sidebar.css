@@ -85,6 +85,26 @@
   color: #1a3e72;
 }
 
+.sidebar.open {
+  transform: translateX(0);
+}
+
+/* Hide sidebar on mobile by default */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+}
+
+/* Mobile hamburger button */
+.hamburger-menu {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: auto;
+}
+
 
 
   

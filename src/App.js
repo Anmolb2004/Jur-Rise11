@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Header from "./components/Header/Header";
 import ClaimForm from "./components/ClaimForm/ClaimForm";
@@ -7,11 +7,16 @@ import UploadSection from "./components/UploadSection/UploadSection";
 import "./App.css";
 
 function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen((prev) => !prev);
+  };
   return (
     <div className="app">
-      <Sidebar />
+          <Sidebar isOpen={isSidebarOpen} />
       <div className="main-content">
-        <NavBar/>
+      <NavBar toggleSidebar={toggleSidebar} />
         <Header />
         <ClaimForm />
         <br></br>
