@@ -6,6 +6,7 @@ function UploadSection() {
   const [files, setFiles] = useState([]);
   const [errors, setErrors] = useState("");
   const fileInputRef = useRef(null); // Ref for the hidden file input
+  const plusFileInputRef = useRef(null); // Ref for the file input triggered by the plus button
 
   // Handle file selection from input
   const handleFileUpload = (e) => {
@@ -18,6 +19,11 @@ function UploadSection() {
   // Trigger file input on click
   const triggerFileInput = () => {
     fileInputRef.current.click();
+  };
+
+  // Trigger file input on clicking the plus button
+  const triggerPlusFileInput = () => {
+    plusFileInputRef.current.click();
   };
 
   // Handle drag over event
@@ -153,7 +159,7 @@ function UploadSection() {
             <p>Upload the Contract</p>
             <p className="small-text">Max 2MB, PDF</p>
           </div>
-          <div className="plus-button">
+          <div className="plus-button" onClick={triggerPlusFileInput}>
             <FaPlusCircle className="plus-icon" />
           </div>
         </div>
@@ -162,8 +168,8 @@ function UploadSection() {
           type="file"
           accept="application/pdf"
           onChange={handleFileUpload}
-          ref={fileInputRef}
-          style={{ display: "none" }} // Hidden file input
+          ref={plusFileInputRef}
+          style={{ display: "none" }} // Hidden file input for plus button
         />
       </div>
     </div>
@@ -171,6 +177,7 @@ function UploadSection() {
 }
 
 export default UploadSection;
+
 
 
 

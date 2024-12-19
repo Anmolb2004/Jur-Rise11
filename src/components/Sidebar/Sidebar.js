@@ -11,9 +11,10 @@ import {
   FiMessageCircle,
 } from "react-icons/fi";
 
-function Sidebar({ isOpen }) {
+// Wrap Sidebar with forwardRef
+const Sidebar = React.forwardRef(({ isOpen }, ref) => {
   return (
-    <div className={`sidebar ${isOpen ? "open" : ""}`}>
+    <div ref={ref} className={`sidebar ${isOpen ? "open" : ""}`}>
       {/* Logo Section */}
       <div className="logo-section">
         <img src={Jur} alt="Jur Logo" className="jur-logo" />
@@ -54,9 +55,11 @@ function Sidebar({ isOpen }) {
       </div>
     </div>
   );
-}
+});
 
 export default Sidebar;
+
+
 
 
 
